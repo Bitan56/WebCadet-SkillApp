@@ -94,6 +94,7 @@ header{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    backdrop-filter: blur(8px);
     opacity: 0;
     z-index: 99;
 }
