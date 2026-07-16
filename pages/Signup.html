@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../stylesheets/Signup.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css" rel="stylesheet" />
+    <title>Document</title>
+</head>
+
+<body>
+
+    <a href="../index.html" class="home-btn"><span><i class="ri-arrow-left-line"></i></span>Back to Home</a href="../index.html">
+
+    <div class="title">SignUp Form</div>
+
+    <form id="form" method="POST">
+        <input type="text" class="form-input" id="name" name="name" placeholder="Enter your name here" required />
+        <input type="text" class="form-input" id="username" name="username" placeholder="Choose a unique username"
+            required />
+        <!-- <input type="text" class="form-input" id="department" name="department" placeholder="Select your department"
+            required /> -->
+
+        <select id="department" class="form-input" name="department">
+            <option value="Choose Department">Choose your Department</option>
+            <option value="CSE">CSE</option>
+            <option value="IT">IT</option>
+            <option value="TT">TT</option>
+            <option value="APM">APM</option>
+            <option value="Other">Not Applicable</option>
+        </select>
+
+        <div class="input-container">
+            <input type="password" class="form-input" id="password" name="password"
+                placeholder="Choose a strong password" required />
+            <div class="toggle-pass"><i class="ri-eye-2-line"></i></div>
+        </div>
+         <div class="error-container">
+        </div>
+        <button class="submit-btn" type="submit">Submit</button>
+        <div class="signin-text">
+            Already have an account? <a href="./SignIn.html">SignIn</a>
+        </div>
+    </form>
+
+    <script src="../JsFiles/Signup.js"></script>
+</body>
+
+</html>
