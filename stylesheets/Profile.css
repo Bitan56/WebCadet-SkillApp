@@ -11,7 +11,11 @@ body{
     overflow-x: hidden;
     overflow-y: auto;
     background-color: rgba(172, 255, 255, 0.916);
-    padding-top: 70px;
+    padding-top: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
 }
 
 header{
@@ -63,7 +67,7 @@ header{
 
 #dyn-btn{
     width: fit-content;
-    background-color: rgb(109, 109, 211);
+    background-color: red;
     padding: 10px 30px;
     color: white;
     border-radius: 10px;
@@ -107,6 +111,44 @@ header{
     display: flex;
     flex-direction: column;
      gap: 30px;
+}
+
+.page-heading{
+    width: 90%;
+    height: fit-content;
+    background-color: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(4px);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px 0px;
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: 1.2px;
+    border-radius: 20px;
+}
+
+.data-box{
+    width: fit-content;
+    height: fit-content;
+    padding: 15px 30px;
+    background-color: white;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.data-head{
+    font-size: 14px;
+    color: gray;
+}
+
+.data-content{
+    font-size: 20px;
+    font-weight: 100;
+    text-align: center;
 }
 
 @media (max-width: 768px) {
