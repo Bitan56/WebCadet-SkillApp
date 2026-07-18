@@ -42,6 +42,8 @@ document.getElementById("form").addEventListener("submit", async e => {
             await localStorage.setItem('department', `${data[i].department}`)
             window.location.href = '../index.html'
             break
+            throw new Error("Details matched");
+            
         }
 
         errorContainer.innerHTML = `
