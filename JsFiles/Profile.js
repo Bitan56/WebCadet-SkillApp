@@ -70,7 +70,7 @@ sidebarViewSkills.addEventListener('click', () => {
 homeBtn.addEventListener('click',()=>{
     window.location.href = '../index.html'
 })
-sidebarDynBtn.addEventListener('click',()=>{
+sidebarHomeBtn.addEventListener('click',()=>{
     window.location.href = '../index.html'
 })
 
