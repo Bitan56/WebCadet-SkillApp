@@ -41,6 +41,7 @@ document.getElementById("form").addEventListener("submit", async e => {
             await localStorage.setItem('name', `${data[i].name}`)
             await localStorage.setItem('department', `${data[i].department}`)
             window.location.href = '../index.html'
+            break
         }
 
         errorContainer.innerHTML = `

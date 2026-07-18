@@ -11,16 +11,23 @@ const alertBoxContainer = document.querySelector('.alert-box-container')
 const alertCross = document.querySelector('.alert-cross')
 
 //Checking if the user is logged in and manipulating the dynamic button
-if (localStorage.getItem('isLogged') == 'yes') {
-    dynBtn.innerHTML = `Profile`
-    sidebarDynBtn.innerHTML = `Profile`
-    dynBtn.addEventListener('click', () => {
-        window.location.href = './pages/Profile.html'
-    })
-    sidebarDynBtn.addEventListener('click', () => {
-        window.location.href = './pages/Profile.html'
-    })
+async function isUser() {
+    const localData = await localStorage.getItem('isLogged')
+    if (localData == 'yes') {
+        dynBtn.innerHTML = `Profile`
+        sidebarDynBtn.innerHTML = `Profile`
+        dynBtn.addEventListener('click', () => {
+            window.location.href = './pages/Profile.html'
+        })
+        sidebarDynBtn.addEventListener('click', () => {
+            window.location.href = './pages/Profile.html'
+        })
+    }
 }
+
+isUser()
+
+
 dynBtn.addEventListener('click', () => {
     window.location.href = './pages/SignIn.html'
 })
@@ -77,9 +84,9 @@ sidebarUploadSkills.addEventListener('click', () => {
 })
 
 //Activating the View Skills button
-viewSkills.addEventListener('click',()=>{
+viewSkills.addEventListener('click', () => {
     window.location.href = './pages/ViewSkills.html'
 })
-sidebarViewSkills.addEventListener('click',()=>{
+sidebarViewSkills.addEventListener('click', () => {
     window.location.href = './pages/ViewSkills.html'
 })
