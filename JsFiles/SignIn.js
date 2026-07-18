@@ -42,16 +42,15 @@ document.getElementById("form").addEventListener("submit", async e => {
             await localStorage.setItem('department', `${data[i].department}`)
             window.location.href = '../index.html'
             break
-            throw new Error("Details matched");
             
-        }
-
-        errorContainer.innerHTML = `
+        }else{
+            errorContainer.innerHTML = `
             <div class="error-box">
                 <div class="alert-sign"><i class="ri-alert-line"></i></div>
                 <div class="alert-text">Credebtials not matched.</div>
             </div>
-            `
+            `                   
+        }
     }
 
     submitBtn.innerHTML = `Submit`
