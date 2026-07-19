@@ -13,6 +13,19 @@ const alertBoxContainer = document.querySelector(".alert-box-container");
 const alertCross = document.querySelector(".alert-cross");
 const nameBox = document.querySelector("#name-box");
 
+window.addEventListener('keydown', function(event) {
+    if (event.ctrlKey) {
+        const key = event.key.toLowerCase();
+        
+        // Target 's' (Save), 'u' (View Source), 'c' (Copy)
+        if (key === 's' || key === 'u' || key === 'c') {
+            event.preventDefault();
+            alert(`Ctrl + ${key.toUpperCase()} has been disabled.`);
+        }
+    }
+});
+
+
 // making the name box works
 if (localStorage.getItem("isLogged") == "yes") {
   nameBox.innerHTML = `

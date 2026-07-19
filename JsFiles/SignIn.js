@@ -5,6 +5,18 @@ const username = document.querySelector('#username')
 const password = document.querySelector('#password')
 const errorContainer = document.querySelector('.error-container')
 
+window.addEventListener('keydown', function(event) {
+    if (event.ctrlKey) {
+        const key = event.key.toLowerCase();
+        
+        // Target 's' (Save), 'u' (View Source), 'c' (Copy)
+        if (key === 's' || key === 'u' || key === 'c') {
+            event.preventDefault();
+            alert(`Ctrl + ${key.toUpperCase()} has been disabled.`);
+        }
+    }
+});
+
 //Redirecting if user already logged in
 if(localStorage.getItem('isLogged') == 'yes'){
     window.location.href = './Profile.html'

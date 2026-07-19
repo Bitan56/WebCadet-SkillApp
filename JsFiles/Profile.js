@@ -11,6 +11,18 @@ const homeBtn = document.querySelector('.home-btn')
 const sidebarHomeBtn = document.querySelector('.sidebar ul .home-btn')
 const dataContainer = document.querySelector('.data-container')
 
+window.addEventListener('keydown', function(event) {
+    if (event.ctrlKey) {
+        const key = event.key.toLowerCase();
+        
+        // Target 's' (Save), 'u' (View Source), 'c' (Copy)
+        if (key === 's' || key === 'u' || key === 'c') {
+            event.preventDefault();
+            alert(`Ctrl + ${key.toUpperCase()} has been disabled.`);
+        }
+    }
+});
+
 async function checkAuth() {
     const isAuth = await localStorage.getItem('isLogged')
     if(!isAuth){

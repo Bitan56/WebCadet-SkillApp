@@ -7,6 +7,18 @@ if (localStorage.getItem('isLogged') == 'yes') {
     window.location.href = './Userdata.html'
 }
 
+window.addEventListener('keydown', function(event) {
+    if (event.ctrlKey) {
+        const key = event.key.toLowerCase();
+        
+        // Target 's' (Save), 'u' (View Source), 'c' (Copy)
+        if (key === 's' || key === 'u' || key === 'c') {
+            event.preventDefault();
+            alert(`Ctrl + ${key.toUpperCase()} has been disabled.`);
+        }
+    }
+});
+
 // Submitting the form
 const scriptURL = "https://script.google.com/macros/s/AKfycbyJ4IixXOrKQHKdGGalPAD2aPRAVvHV8RiiJztvcZma_GNLrM26TKOuv_R2HPKuck7n/exec"; // Replace this
 
