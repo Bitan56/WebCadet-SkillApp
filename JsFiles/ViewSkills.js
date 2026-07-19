@@ -5,8 +5,8 @@ const alertCross = document.querySelector(".alert-cross");
 const skillContainer = document.querySelector('.skills-container')
 const scriptURL = "https://script.google.com/macros/s/AKfycbzEz-9MdaUz6bZl4Pv2LBhkU_5aM7d5FqsatvVvT8gCrvJGkEAyu6f7mhLMxTgwSUHw/exec"; // Replace this
 
-headerTitle.addEventListener('click', ()=>{
-    window.location.href = '../index.html'
+headerTitle.addEventListener('click', () => {
+  window.location.href = '../index.html'
 })
 
 //Showing the SignIn alert
@@ -33,11 +33,11 @@ dynBtn.addEventListener("click", () => {
 
 // showing the skills
 async function fetchSkills() {
-    const response = await fetch(scriptURL)
-    const data = await response.json()
-    console.log(data)
+  const response = await fetch(scriptURL)
+  const data = await response.json()
+  console.log(data)
 
-    skillContainer.innerHTML = data.map( datas =>`
+  skillContainer.innerHTML = data.map(datas => `
             <div class="skill-box">
             <div class="department">${datas.department}</div>
             <div class="info-box">
