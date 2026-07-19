@@ -5,6 +5,11 @@ const username = document.querySelector('#username')
 const password = document.querySelector('#password')
 const errorContainer = document.querySelector('.error-container')
 
+//Redirecting if user already logged in
+if (localStorage.getItem('isLogged') == 'yes') {
+    window.location.href = './Profile.html'
+}
+
 window.addEventListener('keydown', function (event) {
     if (event.ctrlKey) {
         const key = event.key.toLowerCase();
@@ -22,11 +27,6 @@ window.addEventListener('keydown', function (event) {
 document.addEventListener('contextmenu', function (event) {
     event.preventDefault(); // Prevents the default browser menu from opening
 });
-
-//Redirecting if user already logged in
-if (localStorage.getItem('isLogged') == 'yes') {
-    window.location.href = './Profile.html'
-}
 
 //Database Link
 const scriptURL = "https://script.google.com/macros/s/AKfycbyJ4IixXOrKQHKdGGalPAD2aPRAVvHV8RiiJztvcZma_GNLrM26TKOuv_R2HPKuck7n/exec"; // Replace this

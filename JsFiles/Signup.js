@@ -2,9 +2,9 @@
 const submitBtn = document.querySelector('.submit-btn')
 const errorContainer = document.querySelector('.error-container')
 
-//If user already logged in then user will be redirected to userdata page
+//If user already logged in then user will be redirected to profile page
 if (localStorage.getItem('isLogged') == 'yes') {
-    window.location.href = './Userdata.html'
+    window.location.href = './Profile.html'
 }
 
 window.addEventListener('keydown', function(event) {
