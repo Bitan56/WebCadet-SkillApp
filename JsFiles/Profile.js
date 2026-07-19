@@ -35,7 +35,6 @@ async function checkAuth() {
         window.location.href = './SignIn.html'
     }
 }
-
 checkAuth()
 
 //Making the logout button work

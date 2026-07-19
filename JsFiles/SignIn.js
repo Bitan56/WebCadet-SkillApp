@@ -59,18 +59,15 @@ document.getElementById("form").addEventListener("submit", async e => {
             await localStorage.setItem('name', `${data[i].name}`)
             await localStorage.setItem('department', `${data[i].department}`)
             window.location.href = '../index.html'
-            break
         }
-        if (username.value != data[i].username || password.value != data[i].password) {
-            errorContainer.innerHTML = `
+    }
+
+    errorContainer.innerHTML = `
             <div class="error-box">
                 <div class="alert-sign"><i class="ri-alert-line"></i></div>
                 <div class="alert-text">Credebtials not matched.</div>
             </div>
             `
-            break
-        }
-    }
 
     submitBtn.innerHTML = `Submit`
     submitBtn.style.backgroundColor = 'green'

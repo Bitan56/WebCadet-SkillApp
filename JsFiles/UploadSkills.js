@@ -6,10 +6,18 @@ const usernameInput = document.querySelector('#username')
 const departmentInput = document.querySelector('#setDepartment')
 const scriptURL = "https://script.google.com/macros/s/AKfycbzEz-9MdaUz6bZl4Pv2LBhkU_5aM7d5FqsatvVvT8gCrvJGkEAyu6f7mhLMxTgwSUHw/exec"; // Replace this
 
-window.addEventListener('keydown', function(event) {
+async function checkAuth() {
+    const isAuth = await localStorage.getItem('isLogged')
+    if (!isAuth) {
+        window.location.href = './SignIn.html'
+    }
+}
+checkAuth()
+
+window.addEventListener('keydown', function (event) {
     if (event.ctrlKey) {
         const key = event.key.toLowerCase();
-        
+
         // Target 's' (Save), 'u' (View Source), 'c' (Copy)
         if (key === 's' || key === 'u' || key === 'c') {
             event.preventDefault();
@@ -19,10 +27,10 @@ window.addEventListener('keydown', function(event) {
     }
 });
 
-    // Listen for the contextmenu event on the entire document
-    document.addEventListener('contextmenu', function(event) {
-        event.preventDefault(); // Prevents the default browser menu from opening
-    });
+// Listen for the contextmenu event on the entire document
+document.addEventListener('contextmenu', function (event) {
+    event.preventDefault(); // Prevents the default browser menu from opening
+});
 
 async function fetchUserDetails() {
     const localName = await localStorage.getItem('name')

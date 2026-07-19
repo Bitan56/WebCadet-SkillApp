@@ -12,10 +12,12 @@ body{
     overflow-y: auto;
     background-color: rgba(172, 255, 255, 0.916);
     padding-top: 90px;
+    padding-bottom: 50px;
     display: flex;
     flex-direction: column;
     gap: 20px;
     align-items: center;
+    position: relative;
 }
 
 header{
@@ -219,4 +221,17 @@ main{
 
 .alert-text{
     text-align: center;
+}
+
+footer{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.723);
+    color: white;
+    position: absolute;
+    left: 0;
+    bottom: 0;
 }
