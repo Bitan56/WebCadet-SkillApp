@@ -5,10 +5,10 @@ const username = document.querySelector('#username')
 const password = document.querySelector('#password')
 const errorContainer = document.querySelector('.error-container')
 
-window.addEventListener('keydown', function(event) {
+window.addEventListener('keydown', function (event) {
     if (event.ctrlKey) {
         const key = event.key.toLowerCase();
-        
+
         // Target 's' (Save), 'u' (View Source), 'c' (Copy)
         if (key === 's' || key === 'u' || key === 'c') {
             event.preventDefault();
@@ -18,13 +18,13 @@ window.addEventListener('keydown', function(event) {
     }
 });
 
-    // Listen for the contextmenu event on the entire document
-    document.addEventListener('contextmenu', function(event) {
-        event.preventDefault(); // Prevents the default browser menu from opening
-    });
+// Listen for the contextmenu event on the entire document
+document.addEventListener('contextmenu', function (event) {
+    event.preventDefault(); // Prevents the default browser menu from opening
+});
 
 //Redirecting if user already logged in
-if(localStorage.getItem('isLogged') == 'yes'){
+if (localStorage.getItem('isLogged') == 'yes') {
     window.location.href = './Profile.html'
 }
 
@@ -54,19 +54,21 @@ document.getElementById("form").addEventListener("submit", async e => {
 
     for (let i = 0; i < data.length; i++) {
         if (username.value == data[i].username && password.value == data[i].password) {
-            await localStorage.setItem('isLogged','yes')
+            await localStorage.setItem('isLogged', 'yes')
             await localStorage.setItem('username', `${data[i].username}`)
             await localStorage.setItem('name', `${data[i].name}`)
             await localStorage.setItem('department', `${data[i].department}`)
             window.location.href = '../index.html'
             break
-        }else{
+        }
+        if (username.value != data[i].username || password.value != data[i].password) {
             errorContainer.innerHTML = `
             <div class="error-box">
                 <div class="alert-sign"><i class="ri-alert-line"></i></div>
                 <div class="alert-text">Credebtials not matched.</div>
             </div>
-            `                   
+            `
+            break
         }
     }
 
