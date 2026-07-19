@@ -139,6 +139,7 @@ main{
     justify-content: center;
     align-items: center;
     opacity: 0;
+    backdrop-filter: blur(6px);
 }
 
 .cross-btn{
