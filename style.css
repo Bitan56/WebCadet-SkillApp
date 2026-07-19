@@ -11,7 +11,11 @@ body{
     overflow-x: hidden;
     overflow-y: auto;
     background-color: rgba(172, 255, 255, 0.916);
-    padding-top: 70px;
+    padding-top: 90px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
 }
 
 header{
@@ -75,6 +79,50 @@ header{
     font-weight: 600;
     cursor: pointer;
     display: none;
+}
+
+main{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+#name-box{
+    width: 90%;
+    background-color: white;
+    padding: 20px 10px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+#name-box span{
+    font-weight: 600;
+    letter-spacing: 1.05px;
+    font-size: 18px;
+}
+
+#logout{
+    width: fit-content;
+    background-color: red;
+    padding: 10px 30px;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 0px auto;
+    margin-top: 10px;
+}
+
+#get-started{
+    width: fit-content;
+    background-color: rgb(162, 61, 235);
+    padding: 10px 30px;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 0px auto;
+    margin-top: 10px;
 }
 
 .sidebar{
