@@ -1,11 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../stylesheets/UploadSkills.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css" rel="stylesheet" />
     <title>Document</title>
 </head>
+
 <body>
-    Upload Skills
+
+    <a href="../index.html" class="home-btn"><span><i class="ri-arrow-left-line"></i></span>Back to Home</a
+        href="../index.html">
+
+    <div class="title">Upload Your Skills</div>
+
+    <form id="form" method="POST">
+        <input type="text" class="form-input" id="name" name="name" placeholder="Enter your name here" disabled required />
+        <input type="text" class="form-input" id="username" name="username" placeholder="Choose a unique username" disabled
+            required />
+        <select id="department" class="form-input" name="department" disabled>
+            <option id="setDepartment"></option>
+        </select>
+        <input type="text" class="form-input" id="skillName" name="skillName" placeholder="Enter the name of the skill"
+            required />
+        <input type="text" class="form-input" id="skillLink" name="skillLink" placeholder="Share the link to your skill"
+            required />
+
+        <div class="error-container"></div>
+
+        <button class="submit-btn" type="submit">Submit</button>
+        <div class="view-skills">View Skills</div>
+    </form>
+
+    <script src="../JsFiles/UploadSkills.js"></script>
 </body>
+
 </html>

@@ -1,0 +1,85 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(rgb(0, 126, 128), rgb(38, 173, 245));
+  min-height: 100vh;
+  max-height: fit-content;
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  backdrop-filter: blur(10px);
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 0px;
+}
+
+.home-btn {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  text-decoration: none;
+  background-color: white;
+  padding: 20px 50px;
+  border-radius: 50px;
+  color: blue;
+  cursor: pointer;
+}
+.home-btn span {
+  margin-right: 20px;
+}
+
+.title {
+  text-align: center;
+  color: white;
+  font-size: 32px;
+}
+
+#form {
+  width: 90%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 20px 0px;
+}
+
+.form-input {
+  width: 300px;
+  height: 40px;
+  padding: 0px 10px;
+  border: none;
+  border-radius: 10px;
+  transition: 2s ease;
+}
+
+.submit-btn {
+  width: 300px;
+  padding: 10px 0px;
+  text-align: center;
+  background-color: green;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.view-skills {
+  width: 300px;
+  padding: 10px 0px;
+  text-align: center;
+  background-color: rgb(28, 74, 213);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
