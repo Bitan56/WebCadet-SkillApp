@@ -59,7 +59,7 @@ async function fetchSkills() {
             <div class="skill-box">
             <div class="department">${datas.department}</div>
             <div class="info-box">
-                <div class="name">${datas.name}</div>
+                <div class="name">${datas.name.toUpperCase()}</div>
                 <div class="skill-name">${datas.skillName}</div>
                 <div class="username">@${datas.username}</div>
             </div>
