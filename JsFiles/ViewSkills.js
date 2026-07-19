@@ -65,7 +65,7 @@ async function fetchSkills() {
             </div>
             <a href=${datas.skillLink} target="blank" class="skill-btn"><i class="ri-play-circle-fill"></i></a>
         </div>
-            `)
+            `).join('')
 }
 
 fetchSkills()
