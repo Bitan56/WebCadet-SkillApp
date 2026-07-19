@@ -11,21 +11,27 @@ const homeBtn = document.querySelector('.home-btn')
 const sidebarHomeBtn = document.querySelector('.sidebar ul .home-btn')
 const dataContainer = document.querySelector('.data-container')
 
-window.addEventListener('keydown', function(event) {
+window.addEventListener('keydown', function (event) {
     if (event.ctrlKey) {
         const key = event.key.toLowerCase();
-        
+
         // Target 's' (Save), 'u' (View Source), 'c' (Copy)
         if (key === 's' || key === 'u' || key === 'c') {
             event.preventDefault();
             alert(`Ctrl + ${key.toUpperCase()} has been disabled.`);
         }
+        event.preventDefault()
     }
+});
+
+// Listen for the contextmenu event on the entire document
+document.addEventListener('contextmenu', function (event) {
+    event.preventDefault(); // Prevents the default browser menu from opening
 });
 
 async function checkAuth() {
     const isAuth = await localStorage.getItem('isLogged')
-    if(!isAuth){
+    if (!isAuth) {
         window.location.href = './SignIn.html'
     }
 }
@@ -79,10 +85,10 @@ sidebarViewSkills.addEventListener('click', () => {
 })
 
 //Activating the Home button
-homeBtn.addEventListener('click',()=>{
+homeBtn.addEventListener('click', () => {
     window.location.href = '../index.html'
 })
-sidebarHomeBtn.addEventListener('click',()=>{
+sidebarHomeBtn.addEventListener('click', () => {
     window.location.href = '../index.html'
 })
 

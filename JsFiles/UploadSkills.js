@@ -15,8 +15,14 @@ window.addEventListener('keydown', function(event) {
             event.preventDefault();
             alert(`Ctrl + ${key.toUpperCase()} has been disabled.`);
         }
+        event.preventDefault()
     }
 });
+
+    // Listen for the contextmenu event on the entire document
+    document.addEventListener('contextmenu', function(event) {
+        event.preventDefault(); // Prevents the default browser menu from opening
+    });
 
 async function fetchUserDetails() {
     const localName = await localStorage.getItem('name')

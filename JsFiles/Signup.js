@@ -16,8 +16,14 @@ window.addEventListener('keydown', function(event) {
             event.preventDefault();
             alert(`Ctrl + ${key.toUpperCase()} has been disabled.`);
         }
+        event.preventDefault()
     }
 });
+
+    // Listen for the contextmenu event on the entire document
+    document.addEventListener('contextmenu', function(event) {
+        event.preventDefault(); // Prevents the default browser menu from opening
+    });
 
 // Submitting the form
 const scriptURL = "https://script.google.com/macros/s/AKfycbyJ4IixXOrKQHKdGGalPAD2aPRAVvHV8RiiJztvcZma_GNLrM26TKOuv_R2HPKuck7n/exec"; // Replace this

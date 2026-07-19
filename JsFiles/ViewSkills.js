@@ -5,17 +5,23 @@ const alertCross = document.querySelector(".alert-cross");
 const skillContainer = document.querySelector('.skills-container')
 const scriptURL = "https://script.google.com/macros/s/AKfycbzEz-9MdaUz6bZl4Pv2LBhkU_5aM7d5FqsatvVvT8gCrvJGkEAyu6f7mhLMxTgwSUHw/exec"; // Replace this
 
-window.addEventListener('keydown', function(event) {
-    if (event.ctrlKey) {
-        const key = event.key.toLowerCase();
-        
-        // Target 's' (Save), 'u' (View Source), 'c' (Copy)
-        if (key === 's' || key === 'u' || key === 'c') {
-            event.preventDefault();
-            alert(`Ctrl + ${key.toUpperCase()} has been disabled.`);
-        }
+window.addEventListener('keydown', function (event) {
+  if (event.ctrlKey) {
+    const key = event.key.toLowerCase();
+
+    // Target 's' (Save), 'u' (View Source), 'c' (Copy)
+    if (key === 's' || key === 'u' || key === 'c') {
+      event.preventDefault();
+      alert(`Ctrl + ${key.toUpperCase()} has been disabled.`);
     }
+    event.preventDefault()
+  }
 });
+
+    // Listen for the contextmenu event on the entire document
+    document.addEventListener('contextmenu', function(event) {
+        event.preventDefault(); // Prevents the default browser menu from opening
+    });
 
 headerTitle.addEventListener('click', () => {
   window.location.href = '../index.html'
